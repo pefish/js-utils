@@ -1,6 +1,23 @@
 {
   "name": "p-js-utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description": "common tool of js",
+  "keywords": [
+    "common",
+    "js",
+    "tool"
+  ],
+  "homepage": "https://gitee.com/pefish/p-js-utils",
+  "bugs": "https://gitee.com/pefish/p-js-utils/issues",
+  "license": "MIT",
+  "author": "pefish",
+  "engines": {
+    "node": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/pefish/p-js-utils"
+  },
   "scripts": {
     "build": "rm -rf lib && babel src -d lib"
   },
