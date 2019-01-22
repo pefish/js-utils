@@ -1,0 +1,38 @@
+{
+  "name": "p-js-utils",
+  "version": "0.0.2",
+  "scripts": {
+    "build": "rm -rf lib && babel src -d lib"
+  },
+  "dependencies": {
+    "p-js-error": "^0.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "json2csv": "^4.3.3",
+    "jsonwebtoken": "^8.4.0",
+    "marked": "^0.6.0",
+    "moment": "^2.24.0",
+    "simple-json-formatter": "^1.0.2",
+    "speakeasy": "^2.0.0",
+    "xlsx": "^0.14.1"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-3"
+    ],
+    "ignore": [
+      "node_modules"
+    ],
+    "env": {
+      "build": {
+        "optional": [
+          "optimisation",
+          "minification"
+        ]
+      }
+    }
+  }
+}
