@@ -15,7 +15,7 @@ export default class HttpRequestUtil {
       }).join('&')
     }
     return new Promise((resolve, reject) => {
-      debug && logger.info(`get访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`get访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
       request.get(url, {
         timeout: 10000
       }).on('success', function (data, res) {
@@ -49,12 +49,12 @@ export default class HttpRequestUtil {
       }
       headers || (headers = {})
       headers['Content-Type'] = 'application/json; charset=utf-8'
-      debug && logger.info(`getJson访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`getJson访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
       request.get(url, {
         timeout: 10000,
         headers: headers
       }).on('success', function (data, res) {
-        debug && logger.info(`success: ${JSON.stringify(data)}`)
+        global[`debug`] && logger.info(`success: ${JSON.stringify(data)}`)
         resolve(data)
         this.abort()
       }).on('failed', (data, res) => {
@@ -73,7 +73,7 @@ export default class HttpRequestUtil {
 
   static post (url, headers = null, params = null) {
     return new Promise((resolve, reject) => {
-      debug && logger.info(`post访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`post访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
       request.post(url, {
         timeout: 10000,
         data: params || {},
@@ -102,7 +102,7 @@ export default class HttpRequestUtil {
     return new Promise((resolve, reject) => {
       headers || (headers = {})
       headers['Content-Type'] = 'application/json; charset=utf-8'
-      debug && logger.info(`postJson访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`postJson访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
       request.postJson(url, params || {}, {
         timeout: 10000,
         headers: headers,
@@ -111,7 +111,7 @@ export default class HttpRequestUtil {
           request.parsers.json(data, callback)
         }
       }).on('success', function (data, res) {
-        debug && logger.info(`success: ${JSON.stringify(data)}`)
+        global[`debug`] && logger.info(`success: ${JSON.stringify(data)}`)
         resolve(data)
         this.abort()
       }).on('failed', (data, res) => {
@@ -131,7 +131,7 @@ export default class HttpRequestUtil {
   static postFormData (url, headers = null, params = null) {
     return new Promise((resolve, reject) => {
       headers || (headers = {})
-      debug && logger.info(`postFormData访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`postFormData访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
       request.post(url, {
         data: params || {}
       }, {
@@ -142,7 +142,7 @@ export default class HttpRequestUtil {
           request.parsers.json(data, callback)
         }
       }).on('success', function (data, res) {
-        debug && logger.info(`success: ${JSON.stringify(data)}`)
+        global[`debug`] && logger.info(`success: ${JSON.stringify(data)}`)
         resolve(data)
         this.abort()
       }).on('failed', (data, res) => {
@@ -170,14 +170,14 @@ export default class HttpRequestUtil {
       }
       headers || (headers = {})
       headers['Content-Type'] = 'application/json; charset=utf-8'
-      debug && logger.info(`getJsonByAuth访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`getJsonByAuth访问：${url}, headers: ${JSON.stringify(headers)}, body: ${JSON.stringify(params)}`)
       request.get(url, {
         timeout: 10000,
         headers: headers,
         username: username,
         password: password
       }).on('success', function (data, res) {
-        debug && logger.info(`success: ${JSON.stringify(data)}`)
+        global[`debug`] && logger.info(`success: ${JSON.stringify(data)}`)
         resolve(data)
         this.abort()
       }).on('failed', (data, res) => {
@@ -198,14 +198,14 @@ export default class HttpRequestUtil {
     return new Promise((resolve, reject) => {
       headers || (headers = {})
       headers['Content-Type'] = 'application/json; charset=utf-8'
-      debug && logger.info(`postJsonByAuth访问：${url}, body: ${JSON.stringify(params)}`)
+      global[`debug`] && logger.info(`postJsonByAuth访问：${url}, body: ${JSON.stringify(params)}`)
       request.postJson(url, params || {}, {
         timeout: 10000,
         headers: headers,
         username: username,
         password: password
       }).on('success', function (data, res) {
-        debug && logger.info(`success: ${JSON.stringify(data)}`)
+        global[`debug`] && logger.info(`success: ${JSON.stringify(data)}`)
         resolve(data)
         this.abort()
       }).on('failed', (data, res) => {
