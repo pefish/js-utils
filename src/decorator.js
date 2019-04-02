@@ -1,4 +1,4 @@
-import AssertUtil from './assert'
+import AssertUtil from 'p-js-assert'
 
 export default class DecoratorUtil {
 

@@ -1,6 +1,6 @@
 {
   "name": "p-js-utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "common tool of js",
   "keywords": [
     "common",
@@ -22,6 +22,7 @@
     "build": "rm -rf lib && babel src -d lib"
   },
   "dependencies": {
+    "p-js-assert": "^0.0.1",
     "p-js-error": "^0.0.3"
   },
   "devDependencies": {

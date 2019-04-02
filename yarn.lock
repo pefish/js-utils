@@ -519,6 +519,11 @@ bignumber.js@^6.0.0:
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-6.0.0.tgz#bbfa047644609a5af093e9cbd83b0461fa3f6002"
   integrity sha512-x247jIuy60/+FtMRvscqfxtVHQf8AGx2hm9c6btkgC0x/hp9yt+teISNhvF8WlwRkCc5yF2fDECH8SIMe8j+GA==
 
+bignumber.js@^8.1.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-8.1.1.tgz#4b072ae5aea9c20f6730e4e5d529df1271c4d885"
+  integrity sha512-QD46ppGintwPGuL1KqmwhR0O+N2cZUg8JG/VzwI2e28sM9TqHjQB10lI4QAaMHVbLzwVLLAwEglpKPViWX+5NQ==
+
 browserslist@^3.2.6:
   version "3.2.8"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-3.2.8.tgz#b0005361d6471f0f5952797a76fc985f1f978fc6"
@@ -799,12 +804,25 @@ node-assist@^0.4.0:
     bignumber.js "^6.0.0"
     regenerator-runtime "^0.13.1"
 
+p-js-assert@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/p-js-assert/-/p-js-assert-0.0.1.tgz#20e263b6b4e6dec5edef8e2bc384749e11449c69"
+  integrity sha512-vnXZYvwcgPF9fVB9F2rA/a9iEpPZe5QpIJjqYljujBEOosS9R4GVaaXFRw6CKyYa/a7DJMGmDTMjsfh+IQW+bA==
+  dependencies:
+    bignumber.js "^8.1.1"
+    p-js-error "^0.0.4"
+
 p-js-error@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/p-js-error/-/p-js-error-0.0.3.tgz#1c5758ba3a7cd405ce4c4721afcaf41b0ac7e40b"
   integrity sha512-tPGq0azSO/rQPbYrJIh1jSQF+d4zKu1lyXHMoRKVxjs833aKTdhaC5YUoUiBBW9L1zs6ERXGTARqfawo41wUqw==
   dependencies:
     node-assist "^0.4.0"
+
+p-js-error@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/p-js-error/-/p-js-error-0.0.4.tgz#ae7dbba4f998576012bb818227961b7961cc9902"
+  integrity sha512-voF6p/u1QP+7UMMqZLucmnXHN5JncAvyeKjlvGVRQ9HuFhIL/RBxZ0gN0g1UXaRNdsOorWNfnNHuTGKNMN7toA==
 
 printj@~1.1.0, printj@~1.1.2:
   version "1.1.2"
