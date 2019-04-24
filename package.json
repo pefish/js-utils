@@ -1,6 +1,6 @@
 {
   "name": "p-js-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "common tool of js",
   "keywords": [
     "common",
@@ -21,10 +21,6 @@
   "scripts": {
     "build": "rm -rf lib && babel src -d lib"
   },
-  "dependencies": {
-    "p-js-assert": "^0.0.1",
-    "p-js-error": "^0.0.3"
-  },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
@@ -34,7 +30,9 @@
     "moment": "^2.24.0",
     "simple-json-formatter": "^1.0.2",
     "speakeasy": "^2.0.0",
-    "xlsx": "^0.14.1"
+    "xlsx": "^0.14.1",
+    "p-js-assert": "^0.0.1",
+    "p-js-error": "^0.0.4"
   },
   "babel": {
     "presets": [
