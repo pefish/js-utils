@@ -32,7 +32,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
@@ -65,7 +65,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
@@ -92,7 +92,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
@@ -122,7 +122,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result, res) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
@@ -153,7 +153,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result, res) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
@@ -188,7 +188,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
@@ -216,7 +216,7 @@ export default class HttpRequestUtil {
         reject(new ErrorHelper(`${url}访问超时`, 0))
       }).on('complete', function (result, res) {
         if (!this.aborted) {
-          reject(new ErrorHelper(`${url} error.`, 0, result))
+          reject(new ErrorHelper(`${url} error. ${JSON.stringify(result)}`))
         }
       })
     })
