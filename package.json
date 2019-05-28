@@ -1,6 +1,6 @@
 {
-  "name": "p-js-utils",
-  "version": "0.0.8",
+  "name": "@pefish/js-utils",
+  "version": "0.0.9",
   "description": "common tool of js",
   "keywords": [
     "common",
@@ -19,20 +19,22 @@
     "url": "https://gitee.com/pefish/p-js-utils"
   },
   "scripts": {
-    "build": "rm -rf lib && babel src -d lib"
+    "build": "rm -rf lib && babel src -d lib",
+    "prepublish": "yarn build"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "json2csv": "^4.3.3",
     "jsonwebtoken": "^8.4.0",
     "marked": "^0.6.0",
     "moment": "^2.24.0",
+    "p-js-assert": "^0.0.1",
+    "p-js-error": "^0.0.4",
     "simple-json-formatter": "^1.0.2",
     "speakeasy": "^2.0.0",
-    "xlsx": "^0.14.1",
-    "p-js-assert": "^0.0.1",
-    "p-js-error": "^0.0.4"
+    "xlsx": "^0.14.1"
   },
   "babel": {
     "presets": [
