@@ -1,7 +1,7 @@
 /** @module */
 
 import json2csv from 'json2csv'
-import FileUtil from './file'
+import FileUtil from '../../js-util-file/src/file'
 
 /**
  * csv工具类

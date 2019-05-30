@@ -1,6 +1,6 @@
 /** @module */
 
-import FileUtil from './file'
+import FileUtil from '../../js-util-file/src/file'
 import path from 'path'
 import ErrorHelper from 'p-js-error'
 
@@ -16,22 +16,6 @@ export default class CommonUtil {
       }
     }
     return null
-  }
-
-  /**
-   * 执行async方法
-   * @param method {function} async方法
-   * @param errCb {function} 发生错误的回调
-   * @param exitIfFinish {boolean} async方法执行完是否退出 default: true
-   * @param logErr {boolean} 是否打印错误日志 default: true
-   */
-  static startAsync (method, errCb = null, exitIfFinish = true, logErr = true) {
-    method().then(() => {
-      exitIfFinish === true && process.exit(0)
-    }).catch(async (err) => {
-      logErr === true && logger.error(err)
-      errCb && (await errCb())
-    })
   }
 
   static onExiting (onExiting) {
