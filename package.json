@@ -28,7 +28,7 @@
     "babel-preset-stage-3": "^6.24.1",
     "json2csv": "^4.3.3",
     "jsonwebtoken": "^8.4.0",
-    "marked": "^0.6.0",
+    "marked": "^0.7.0",
     "moment": "^2.24.0",
     "p-js-assert": "^0.0.1",
     "p-js-error": "^0.0.4",
